@@ -38,7 +38,7 @@ class TenantController extends Controller
     {   
         $validate=$request->validate([
             'name'=>'required',
-            'email'=>'required',
+            'email'=>'required', 
             'domain_name'=>'required:string|max:255|unique:domains,domain',
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
